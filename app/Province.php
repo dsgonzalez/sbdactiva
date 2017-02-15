@@ -1,0 +1,17 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Province extends Model
+{
+    protected $table = 'provinces';
+
+    protected $fillable = ['name','province_id'];
+
+    public function town()
+    {
+        return $this->hasMany('Town');
+    }
+}
